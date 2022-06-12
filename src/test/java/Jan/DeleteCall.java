@@ -25,5 +25,19 @@ public class DeleteCall {
 		//this is comment
 	
 	}
+	
+	@Test
+	public void deleteCall_01() {
+		RestAssured.baseURI = "https://jsonplaceholder.typicode.com/";
+		Response resp = RestAssured.when()
+		           .delete("posts/1");
+		
+		System.out.println(resp.body().asString());
+		System.out.println(resp.statusCode());
+		Assert.assertEquals(resp.statusCode(), 200);
+		System.out.println(resp.time());
+		System.out.println(resp.header("Etag"));
+		Assert.assertEquals(resp.header("Etag"), "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"");
+	}
 
 }
