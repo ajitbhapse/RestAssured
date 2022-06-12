@@ -82,6 +82,8 @@ public class GetCall {
 		System.out.println("body :"+response.getBody().asPrettyString());
 		System.out.println("status code :"+response.getStatusCode());
 		System.out.println("time :"+response.getTime());
+		
+		//this is comment added for testing
 	}
 	
 	@Test
