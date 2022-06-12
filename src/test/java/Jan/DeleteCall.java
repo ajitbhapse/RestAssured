@@ -20,6 +20,8 @@ public class DeleteCall {
 		System.out.println(resp.time());
 		System.out.println(resp.header("Etag"));
 		Assert.assertEquals(resp.header("Etag"), "W/\"2-vyGp6PvFo4RvsFtPoIWeCReyIC8\"");
+		//show only in master branch
+	
 	}
 
 }
